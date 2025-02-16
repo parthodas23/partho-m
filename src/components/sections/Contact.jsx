@@ -37,10 +37,11 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-8"
     >
       <RevealOnScroll>
-        <div className="px-4 w-150">
+        {/* Desktop View */}
+        <div className="hidden md:block px-4 w-150">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Get In Touch
           </h2>
@@ -90,6 +91,48 @@ export const Contact = () => {
             <button
               type="submit"
               className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        {/* Mobile View (Same as Screenshot) */}
+        <div className="w-full max-w-md bg-white/10 p-4 rounded-lg shadow-lg md:hidden block">
+          <h2 className="text-2xl font-bold mb-6 text-blue-400 text-center">
+            Get In Touch
+          </h2>
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="from_name"
+              required
+              value={formData.from_name}
+              className="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 text-white"
+              placeholder="Your Name..."
+              onChange={(e) => setFormData({ ...formData, from_name: e.target.value })}
+            />
+            <input
+              type="email"
+              name="reply_to"
+              required
+              value={formData.reply_to}
+              className="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 text-white"
+              placeholder="Your Email..."
+              onChange={(e) => setFormData({ ...formData, reply_to: e.target.value })}
+            />
+            <textarea
+              name="message"
+              required
+              rows={4}
+              value={formData.message}
+              className="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 text-white"
+              placeholder="Your Message..."
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            />
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-3 rounded"
             >
               Send Message
             </button>
