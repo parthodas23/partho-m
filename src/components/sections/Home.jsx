@@ -35,7 +35,7 @@ export const Home = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="/partho-m/CV Resume.pdf"
+                href="/partho-m/CV Resume (2).pdf"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 View Resume

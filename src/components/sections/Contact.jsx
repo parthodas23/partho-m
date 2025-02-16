@@ -43,7 +43,7 @@ export const Contact = () => {
         {/* Desktop View */}
         <div className="hidden md:block px-4 w-150">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            Get In Touch
+            Let's Build Something Amazing
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
@@ -90,9 +90,24 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer"
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 md:py-4 md:px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/20 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
             >
-              Send Message
+              <span className="text-sm md:text-base lg:text-lg">
+                Send Message
+              </span>
+              <svg
+                className="w-4 h-4 md:w-5 md:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                />
+              </svg>
             </button>
           </form>
         </div>
@@ -100,7 +115,7 @@ export const Contact = () => {
         {/* Mobile View (Same as Screenshot) */}
         <div className="w-full max-w-md bg-white/10 p-4 rounded-lg shadow-lg md:hidden block">
           <h2 className="text-2xl font-bold mb-6 text-blue-400 text-center">
-            Get In Touch
+          Let's Build Something Amazing
           </h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <input
@@ -110,7 +125,9 @@ export const Contact = () => {
               value={formData.from_name}
               className="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 text-white"
               placeholder="Your Name..."
-              onChange={(e) => setFormData({ ...formData, from_name: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, from_name: e.target.value })
+              }
             />
             <input
               type="email"
@@ -119,7 +136,9 @@ export const Contact = () => {
               value={formData.reply_to}
               className="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 text-white"
               placeholder="Your Email..."
-              onChange={(e) => setFormData({ ...formData, reply_to: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, reply_to: e.target.value })
+              }
             />
             <textarea
               name="message"
@@ -128,13 +147,30 @@ export const Contact = () => {
               value={formData.message}
               className="w-full bg-gray-900 border border-gray-700 rounded px-4 py-3 text-white"
               placeholder="Your Message..."
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
             />
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 rounded"
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 md:py-4 md:px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/20 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
             >
-              Send Message
+              <span className="text-sm md:text-base lg:text-lg">
+                Send Message
+              </span>
+              <svg
+                className="w-4 h-4 md:w-5 md:h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                />
+              </svg>
             </button>
           </form>
         </div>
