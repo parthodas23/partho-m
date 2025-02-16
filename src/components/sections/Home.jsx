@@ -11,7 +11,7 @@ export const Home = () => {
           {/* Profile Picture */}
           <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-2 md:border-4 border-blue-500 shadow-lg transition-all duration-300">
             <img
-              src="/public/IMG-20240713-WA00021.jpg"
+              src="/partho-m/IMG-20240713-WA00021.jpg"
               alt="Partha Das"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               loading="lazy"
@@ -35,7 +35,7 @@ export const Home = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="/public/CV Resume.pdf"
+                href="/partho-m/CV Resume.pdf"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 View Resume
