@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
-const serviceID = import.meta.env.VITE_SERVICE_ID;
-const templateID = import.meta.env.VITE_TEMPLATE_ID;
-const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+const serviceID = "service_z3jy3k9";
+const templateID = "template_5i3i0dt";
+const publicKey = "7g5y94oRt9_CZ-erI";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
